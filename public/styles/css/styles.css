@@ -1,0 +1,197 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,300|Oleo+Script:400,700);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body, p, a {
+  -webkit-font-smoothing: antialiased;
+  font-size: 11pt;
+  color: #333;
+  font-family: 'Open Sans', sans-serif; }
+
+a {
+  text-decoration: none; }
+
+h1, h2, h3, h4 {
+  font-weight: bold; }
+
+h1 {
+  font-size: 24pt; }
+
+h2 {
+  font-size: 20pt; }
+
+h3 {
+  font-size: 16pt; }
+
+.title {
+  font-family: 'Oleo Script', cursive; }
+
+.wrapper {
+  width: 99%;
+  max-width: 1200px;
+  margin: 0 auto; }
+
+#header {
+  box-sizing: border-box;
+  margin: 10px auto 5px;
+  position: relative; }
+  #header #logo {
+    color: #E41A1F;
+    font-size: 45pt;
+    letter-spacing: -2px;
+    line-height: 0.9;
+    text-indent: 1%; }
+    #header #logo span {
+      color: #fff;
+      display: block;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 100;
+      letter-spacing: 0;
+      background-color: #0251B3;
+      padding: 6px 5px 10px;
+      font-size: 16pt; }
+  #header #nav {
+    position: absolute;
+    right: 0;
+    top: 21px;
+    width: 400px; }
+    #header #nav li {
+      float: left;
+      margin-right: 7px; }
+      #header #nav li a {
+        color: #fff;
+        background-color: #E41A1F;
+        display: block;
+        padding: 5px 10px 7px;
+        border-radius: 4px;
+        text-align: center; }
+
+.filter {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: .6;
+  z-index: 5;
+  position: absolute; }
+
+.filter-red {
+  background-color: #E41A1F; }
+
+#hero {
+  overflow: hidden;
+  float: left; }
+  #hero .hero-left {
+    width: 70%;
+    float: left;
+    position: relative; }
+    #hero .hero-left .hero-block {
+      position: relative;
+      height: 350px;
+      overflow: hidden; }
+      #hero .hero-left .hero-block .message {
+        position: absolute;
+        top: 1%;
+        left: 1%;
+        z-index: 10; }
+        #hero .hero-left .hero-block .message h2, #hero .hero-left .hero-block .message p {
+          color: #fff; }
+        #hero .hero-left .hero-block .message h2 {
+          font-family: 'Open Sans';
+          font-weight: bold;
+          font-size: 42pt;
+          letter-spacing: -5px;
+          line-height: 1;
+          margin: 10px auto 0;
+          text-transform: uppercase; }
+        #hero .hero-left .hero-block .message p {
+          font-size: 14pt; }
+      #hero .hero-left .hero-block img {
+        opacity: 0.7;
+        position: relative;
+        z-index: 0;
+        max-width: 100%; }
+  #hero .hero-right {
+    float: right;
+    width: 29%; }
+    #hero .hero-right #message1 {
+      font-weight: 900;
+      font-size: 17pt;
+      letter-spacing: -2px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      border-bottom: 5px solid #0251B3;
+      padding: 0px 5px 0px 45px;
+      position: relative;
+      line-height: 1.65; }
+      #hero .hero-right #message1 .fa {
+        font-size: 28pt;
+        position: absolute;
+        left: 0; }
+    #hero .hero-right #message2 {
+      border-bottom: 5px solid #0251B3;
+      font-weight: 500;
+      font-size: 10pt;
+      letter-spacing: -1px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      padding: 0px 0px 5px;
+      position: relative;
+      color: #555;
+      text-align: center; }
+    #hero .hero-right #message3, #hero .hero-right #message4 {
+      height: 135px;
+      margin-bottom: 5px;
+      overflow: hidden;
+      position: relative; }
+      #hero .hero-right #message3 p, #hero .hero-right #message4 p {
+        position: absolute; }
+      #hero .hero-right #message3 a, #hero .hero-right #message4 a {
+        float: left; }
+      #hero .hero-right #message3 img, #hero .hero-right #message4 img {
+        max-width: 100%; }
+    #hero .hero-right li:last-child {
+      margin-bottom: 0; }
