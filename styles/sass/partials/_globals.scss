@@ -14,9 +14,14 @@ h3 { font-size: 16pt; }
 }
 
 #header {
-	box-sizing: border-box;
-	margin: 10px auto 5px; 
-	position: relative;
+	box-sizing: border-box; 
+    margin: 10px auto 5px;
+    position: relative;
+    border-bottom: 35px solid #0251B3;
+    float: left;
+    width: 100%;
+
+    .wrapper { overflow: hidden; margin: 0 auto -35px auto; }
 
 	#logo { 
 		color: $primary; 
@@ -24,6 +29,8 @@ h3 { font-size: 16pt; }
     	letter-spacing: -2px;
 	    line-height: 0.9;
 	    text-indent: 1%; 
+        width: 22%;
+	    float: left;
 
 		span { 
 			color: #fff; 
@@ -31,20 +38,19 @@ h3 { font-size: 16pt; }
 			font-family: 'Open Sans', sans-serif; 
 			font-weight: 100; 
 			letter-spacing: 0;
-		    background-color: #0251B3;
 		    padding: 6px 5px 10px;
 		    font-size: 16pt;
 		}
 	}
 
 	#nav {
-		position: absolute;
-	    right: 0;
-	    top: 21px;
-	    width: 400px;
+		float: right;
+		margin: 20px 0 0 0;
+
 		li {
 			float: left;
 			margin-right: 7px;
+			&:last-child { margin-right: 0; }
 			a {
 				color: #fff;
 				background-color: $primary;

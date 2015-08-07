@@ -1,22 +1,22 @@
-var gulp 		= require('gulp');
-var imagemin 	= require('gulp-imagemin');
-var optipng 	= require('imagemin-optipng');
-var jpegtran 	= require('imagemin-jpegtran');
+var gulp 		    = require('gulp');
+var imagemin 	  = require('gulp-imagemin');
+var optipng 	  = require('imagemin-optipng');
+var jpegtran 	  = require('imagemin-jpegtran');
 var livereload  = require('gulp-livereload');
 var browserify  = require('browserify');
 var streamify 	= require('gulp-streamify');
-var rename 		= require('gulp-rename');
-var uglify 		= require('gulp-uglify')
-var source   	= require('vinyl-source-stream');
-var sass 		= require('gulp-sass');
-var notify 		= require("gulp-notify");
+var rename 		  = require('gulp-rename');
+var uglify 		  = require('gulp-uglify')
+var source   	  = require('vinyl-source-stream');
+var sass 		    = require('gulp-sass');
+var notify 		  = require("gulp-notify");
 
 
 var paths = {
-  scripts: 	['public/js/**/*.js'],
-  images: 	'public/img/**/*.{gif,jpg,png,svg}',
-  sass: 	'public/styles/sass/**/*.scss',
-  css: 		'public/styles/css/'
+  scripts: 	['./js/**/*.js'],
+  images: 	'./img/**/*.{gif,jpg,png,svg}',
+  sass: 	'./styles/sass/**/*.scss',
+  css: 		'./styles/css/'
 };
 
 // Copy all static images 
