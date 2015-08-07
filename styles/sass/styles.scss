@@ -29,6 +29,19 @@
 				}
 				p { font-size: 14pt; }
 			}
+			.more {
+				position: absolute;
+				bottom: 3%;
+				right: 2%;
+				color: darken($primary, 15%);
+				opacity: .9;
+				font-size: 24pt;
+				z-index: 15;
+				&:hover {
+					opacity: 1;
+					color: desaturate(darken($primary, 20%), 10%);
+				}
+			}
 			img { 
 				opacity: 0.7;
 				position: relative;
@@ -79,4 +92,65 @@
 		}
 
 	}
+}
+
+#projects {
+	width: 70%;
+	float: left;
+
+	#projects_and_highlights {
+		margin-bottom: 5px; 
+		li {
+			float: left;
+			width: 50%; 
+			a { 
+				display: block; 
+				background: $primary; 
+				color: #eee; 
+				padding: 5px; 
+				text-transform: uppercase; 
+				font-family: 'Open Sans'; 
+				font-weight: bold; 
+			    letter-spacing: -1px;
+			}
+			&:last-child a { background: $secondary; }			
+		}
+	}
+
+	#project_content {
+		.post {
+			margin-bottom: 5px; 
+			.featured_image {
+				position: relative;
+				width: 40%; 
+				float: left;
+				margin-right: 1%; 
+				img { width: 100%; }
+				.filter { opacity: .7; }
+			}
+			.post_excerpt {
+				width: 59%;
+				float: left;
+				.title {
+					line-height: 1;
+					margin: 0 0 5px; 
+					padding: 0;
+					a {
+						display: block;
+						font-size: 17pt;
+					    text-transform: uppercase;
+					    letter-spacing: -1px;
+					    padding: 5px 15px;
+					}
+				}
+			}
+		}
+	}
+}
+
+#testimonials {
+	width: 29%;
+	float: right;
+	min-height: 100px;
+	background: red;
 }

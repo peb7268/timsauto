@@ -67,6 +67,22 @@ h2 {
 h3 {
   font-size: 16pt; }
 
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+* html .clearfix {
+  zoom: 1; }
+
+/* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1; }
+
+/* IE7 */
 .title {
   font-family: 'Oleo Script', cursive; }
 
@@ -80,7 +96,6 @@ h3 {
   margin: 10px auto 5px;
   position: relative;
   border-bottom: 35px solid #0251B3;
-  float: left;
   width: 100%; }
   #header .wrapper {
     overflow: hidden;
@@ -128,6 +143,24 @@ h3 {
 .filter-red {
   background-color: #E41A1F; }
 
+.red .title a {
+  background: #E41A1F;
+  color: #fff; }
+
+.red .filter {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,e41a1f+100&amp;0+0,1+100 */
+  background: radial-gradient(ellipse at center, rgba(228, 26, 31, 0.4) 20%, rgba(228, 26, 31, 0.7) 100%);
+  /* W3C */ }
+
+.blue .title a {
+  background: #0251B3;
+  color: #fff; }
+
+.blue .filter {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,e41a1f+100&amp;0+0,1+100 */
+  background: radial-gradient(ellipse at center, rgba(2, 81, 179, 0.4) 20%, rgba(2, 81, 179, 0.7) 100%);
+  /* W3C */ }
+
 #hero .hero-left {
   width: 70%;
   float: left;
@@ -153,6 +186,17 @@ h3 {
         text-transform: uppercase; }
       #hero .hero-left .hero-block .message p {
         font-size: 14pt; }
+    #hero .hero-left .hero-block .more {
+      position: absolute;
+      bottom: 3%;
+      right: 2%;
+      color: #9f1216;
+      opacity: .9;
+      font-size: 24pt;
+      z-index: 15; }
+      #hero .hero-left .hero-block .more:hover {
+        opacity: 1;
+        color: #81171a; }
     #hero .hero-left .hero-block img {
       opacity: 0.7;
       position: relative;
@@ -200,3 +244,53 @@ h3 {
       max-width: 100%; }
   #hero .hero-right li:last-child {
     margin-bottom: 0; }
+
+#projects {
+  width: 70%;
+  float: left; }
+  #projects #projects_and_highlights {
+    margin-bottom: 5px; }
+    #projects #projects_and_highlights li {
+      float: left;
+      width: 50%; }
+      #projects #projects_and_highlights li a {
+        display: block;
+        background: #E41A1F;
+        color: #eee;
+        padding: 5px;
+        text-transform: uppercase;
+        font-family: 'Open Sans';
+        font-weight: bold;
+        letter-spacing: -1px; }
+      #projects #projects_and_highlights li:last-child a {
+        background: #0251B3; }
+  #projects #project_content .post {
+    margin-bottom: 5px; }
+    #projects #project_content .post .featured_image {
+      position: relative;
+      width: 40%;
+      float: left;
+      margin-right: 1%; }
+      #projects #project_content .post .featured_image img {
+        width: 100%; }
+      #projects #project_content .post .featured_image .filter {
+        opacity: .7; }
+    #projects #project_content .post .post_excerpt {
+      width: 59%;
+      float: left; }
+      #projects #project_content .post .post_excerpt .title {
+        line-height: 1;
+        margin: 0 0 5px;
+        padding: 0; }
+        #projects #project_content .post .post_excerpt .title a {
+          display: block;
+          font-size: 17pt;
+          text-transform: uppercase;
+          letter-spacing: -1px;
+          padding: 5px 15px; }
+
+#testimonials {
+  width: 29%;
+  float: right;
+  min-height: 100px;
+  background: red; }

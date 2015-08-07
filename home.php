@@ -21,6 +21,9 @@
 						<h2>Need For Speed</h2>
 						<p>World Class upholstery at a next door price</p>
 					</div>
+					<a href="#more" class="more">
+						<i class="fa fa-arrow-circle-right"></i>
+					</a>
 					<div class="filter filter-red"></div>
 					<img src='<?php bloginfo('template_directory'); ?>/dist/img/need_for_speed.jpg'>
 				</div>
@@ -50,7 +53,9 @@
 				<li><a href="#latest_projects">Latest Projects</a></li>
 				<li><a href="#highlight_reel">Highlight Reel</a></li>
 			</ul>
-			<div id="project_content"></div>
+			<div id="project_content">
+				<?php get_template_part( 'loops/recent' ); ?>
+			</div>
 		</div>
 		<ul id="testimonials"></ul>
 	</div>

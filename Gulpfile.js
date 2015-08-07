@@ -27,16 +27,16 @@ gulp.task('images', function() {
   		progressive: true,
   		use: [optipng({optimizationLevel: 5}), jpegtran({progressive: true})]
   	}))
-    .pipe(gulp.dest('./public/dist/img'))
+    .pipe(gulp.dest('./dist/img'))
     .pipe(notify("Images Optimized."));
 });
 
 gulp.task('browserify', function () {
-  var bundleStream = browserify('public/js/main.js').bundle();
-      bundleStream.pipe(source('public/js/main.js'))
+  var bundleStream = browserify('./js/main.js').bundle();
+      bundleStream.pipe(source('./js/main.js'))
       .pipe(streamify(uglify()))
       .pipe(rename('bundle.js'))
-      .pipe(gulp.dest('./public/dist/js/'))
+      .pipe(gulp.dest('./dist/js/'))
       .pipe(notify("Scripts Browserified."));
 });
   
