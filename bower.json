@@ -1,0 +1,23 @@
+{
+  "name": "timsautoupholstery.com",
+  "version": "0.0.5",
+  "homepage": "https://github.com/peb7268/timsauto",
+  "authors": [
+    "peb7268 <peb7268@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "js/vendors",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fancybox": "~2.1.5",
+    "flip": "~1.0.15",
+    "isotope": "~2.2.1",
+    "jquery": "~2.1.4"
+  }
+}
