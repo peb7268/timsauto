@@ -220,7 +220,7 @@ h3 {
       position: absolute;
       top: 1%;
       left: 1%;
-      z-index: 10; }
+      z-index: 25; }
       #hero .hero-left .hero-block .message h2, #hero .hero-left .hero-block .message p {
         color: #fff; }
       #hero .hero-left .hero-block .message h2 {
@@ -240,7 +240,7 @@ h3 {
       color: #9f1216;
       opacity: .9;
       font-size: 24pt;
-      z-index: 15; }
+      z-index: 25; }
       #hero .hero-left .hero-block .more:hover {
         opacity: 1;
         color: #81171a; }

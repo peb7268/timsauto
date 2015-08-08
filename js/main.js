@@ -19,10 +19,10 @@ $('document').ready(function(){
 	});
 
 	$post_items.hover(function(){
-		$(this).find('.filter').slideUp(200);
+		$(this).find('.filter').slideUp(120);
 		$('body').css('cursor', 'pointer');
 	}, function(){
-		$(this).find('.filter').slideDown(200);
+		$(this).find('.filter').slideDown(120);
 		$('body').removeAttr('style');
 	});
 });
