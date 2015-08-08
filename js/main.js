@@ -1,11 +1,24 @@
 var $ = require('./vendors/jquery/dist/jquery.js');
+
+function lookupLink(target){
+	var link = $(target).data('action');
+	
+	if(typeof link == 'undefined') return lookupLink($(target).parent());
+
+	return link;
+}
+
 $('document').ready(function(){
-
 	//Post Behavior
-	var $post = $('#project_content .post');
+	var $post_items = $('.featured_image, .more, .title a');
+	$post_items.on('click', function(evt){ 
+		evt.preventDefault(); 
+		var action = lookupLink(evt.target);
 
-	$post.on('click', function(evt){ evt.preventDefault(); window.location.href=$(evt.target).data('action'); });
-	$post.hover(function(){
+		window.location.href=action; 
+	});
+
+	$post_items.hover(function(){
 		$(this).find('.filter').slideUp(200);
 		$('body').css('cursor', 'pointer');
 	}, function(){

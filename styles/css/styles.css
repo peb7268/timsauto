@@ -55,6 +55,9 @@ body, p, a {
 a {
   text-decoration: none; }
 
+p {
+  margin: 0 0 7px; }
+
 h1, h2, h3, h4 {
   font-weight: bold; }
 
@@ -91,6 +94,13 @@ h3 {
   max-width: 1200px;
   margin: 0 auto; }
 
+.single #content.wrapper {
+  max-width: 1300px;
+  margin: 30px auto; }
+
+#content.wrapper h1 {
+  margin: 0 0 7px; }
+
 #header {
   box-sizing: border-box;
   margin: 10px auto 5px;
@@ -102,12 +112,13 @@ h3 {
     margin: 0 auto -35px auto; }
   #header #logo {
     color: #E41A1F;
-    font-size: 45pt;
     letter-spacing: -2px;
     line-height: 0.9;
     text-indent: 1%;
     width: 22%;
     float: left; }
+    #header #logo h1 {
+      font-size: 45pt; }
     #header #logo span {
       color: #fff;
       display: block;
@@ -137,11 +148,14 @@ h3 {
   width: 100%;
   height: 100%;
   opacity: .6;
-  z-index: 5;
+  z-index: 15;
   position: absolute; }
 
 .filter-red {
   background-color: #E41A1F; }
+
+.filter-blue {
+  background-color: #0251B3; }
 
 .red .title a {
   background: #E41A1F;
@@ -160,6 +174,39 @@ h3 {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,e41a1f+100&amp;0+0,1+100 */
   background: radial-gradient(ellipse at center, rgba(2, 81, 179, 0.4) 20%, rgba(2, 81, 179, 0.7) 100%);
   /* W3C */ }
+
+.gallery .gallery-item {
+  position: relative;
+  float: left;
+  margin: 5px;
+  width: 300px;
+  height: 225px; }
+  .gallery .gallery-item:hover {
+    cursor: pointer; }
+  .gallery .gallery-item .gallery-icon {
+    position: relative; }
+    .gallery .gallery-item .gallery-icon > a {
+      position: relative; }
+  .gallery .gallery-item > .back {
+    padding: 10px;
+    box-sizing: border-box; }
+    .gallery .gallery-item > .back p {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 14pt;
+      font-weight: bold; }
+    .gallery .gallery-item > .back a {
+      position: absolute;
+      bottom: 5%;
+      right: 5%;
+      color: #fff;
+      font-size: 14pt; }
+
+.gallery .red.card .back {
+  background-color: #E41A1F; }
+
+.gallery .blue.card .back {
+  background-color: #0251B3; }
 
 #hero .hero-left {
   width: 70%;

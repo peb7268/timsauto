@@ -34,7 +34,7 @@ gulp.task('images', function() {
 gulp.task('browserify', function () {
   var bundleStream = browserify('./js/main.js').bundle();
       bundleStream.pipe(source('./js/main.js'))
-      .pipe(streamify(uglify()))
+      //.pipe(streamify(uglify()))
       .pipe(rename('bundle.js'))
       .pipe(gulp.dest('./dist/js/'))
       .pipe(notify("Scripts Browserified."));

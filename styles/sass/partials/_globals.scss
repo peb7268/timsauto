@@ -1,5 +1,6 @@
 body, p, a { -webkit-font-smoothing: antialiased; font-size: 11pt; color: #333; font-family: 'Open Sans', sans-serif; }
 a { text-decoration: none; }
+p { margin: 0 0 7px; }
 h1, h2, h3, h4 { font-weight: bold; }
 h1 { font-size: 24pt; }
 h2 { font-size: 20pt; }
@@ -24,6 +25,15 @@ h3 { font-size: 16pt; }
 	margin: 0 auto;
 }
 
+.single #content.wrapper {
+	max-width: 1300px;
+	margin: 30px auto;
+}
+
+#content.wrapper {
+	h1 { margin: 0 0 7px; }
+}
+
 #header {
 	box-sizing: border-box; 
     margin: 10px auto 5px;
@@ -35,12 +45,12 @@ h3 { font-size: 16pt; }
 
 	#logo { 
 		color: $primary; 
-		font-size: 45pt;
     	letter-spacing: -2px;
 	    line-height: 0.9;
 	    text-indent: 1%; 
         width: 22%;
 	    float: left;
+	    h1 { font-size: 45pt; }
 
 		span { 
 			color: #fff; 
@@ -78,13 +88,18 @@ h3 { font-size: 16pt; }
 	width: 100%;
 	height: 100%;
 	opacity: .6;
-	z-index: 5;
+	z-index: 15;
 	position: absolute;
 }
 
 .filter-red {
 	background-color: $primary;
 }
+
+.filter-blue {
+	background-color: $secondary;
+}
+
 
 .red { 
 	.title a { background: $primary; color: #fff; }
@@ -111,3 +126,5 @@ h3 { font-size: 16pt; }
 		background: radial-gradient(ellipse at center,  rgba($secondary, .4) 20%, rgba($secondary, .7) 100%); /* W3C */
 	}
 }
+
+@import 'partials/gallery';
