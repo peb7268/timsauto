@@ -119,6 +119,8 @@
 	}
 
 	#project_content {
+		position: relative; 
+
 		.post {
 			margin-bottom: 5px; 
 			.featured_image {
@@ -146,6 +148,19 @@
 				}
 			}
 		}
+		#more {
+			background: $secondary;
+			display: block;
+			color: #fff;
+			text-align: center;
+		    position: absolute;
+		    width: 535px;
+		    right: 0;
+		    box-sizing: border-box;
+		    padding: 2px 0;
+		    bottom: 1px;
+		    &:hover { background: lighten($secondary, 10%); }
+		}
 	}
 }
 
@@ -156,6 +171,9 @@
 	background: red;
 }
 
+.home #content.wrapper {
+	margin-bottom: 30px;
+}
 
 //Page Styles
 .page #content.wrapper {

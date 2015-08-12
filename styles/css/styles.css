@@ -380,36 +380,54 @@ h3 {
         letter-spacing: -1px; }
       #projects #projects_and_highlights li:last-child a {
         background: #0251B3; }
-  #projects #project_content .post {
-    margin-bottom: 5px; }
-    #projects #project_content .post .featured_image {
-      position: relative;
-      width: 40%;
-      float: left;
-      margin-right: 1%; }
-      #projects #project_content .post .featured_image img {
-        width: 100%; }
-      #projects #project_content .post .featured_image .filter {
-        opacity: .7; }
-    #projects #project_content .post .post_excerpt {
-      width: 59%;
-      float: left; }
-      #projects #project_content .post .post_excerpt .title {
-        line-height: 1;
-        margin: 0 0 5px;
-        padding: 0; }
-        #projects #project_content .post .post_excerpt .title a {
-          display: block;
-          font-size: 17pt;
-          text-transform: uppercase;
-          letter-spacing: -1px;
-          padding: 5px 15px; }
+  #projects #project_content {
+    position: relative; }
+    #projects #project_content .post {
+      margin-bottom: 5px; }
+      #projects #project_content .post .featured_image {
+        position: relative;
+        width: 40%;
+        float: left;
+        margin-right: 1%; }
+        #projects #project_content .post .featured_image img {
+          width: 100%; }
+        #projects #project_content .post .featured_image .filter {
+          opacity: .7; }
+      #projects #project_content .post .post_excerpt {
+        width: 59%;
+        float: left; }
+        #projects #project_content .post .post_excerpt .title {
+          line-height: 1;
+          margin: 0 0 5px;
+          padding: 0; }
+          #projects #project_content .post .post_excerpt .title a {
+            display: block;
+            font-size: 17pt;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            padding: 5px 15px; }
+    #projects #project_content #more {
+      background: #0251B3;
+      display: block;
+      color: #fff;
+      text-align: center;
+      position: absolute;
+      width: 535px;
+      right: 0;
+      box-sizing: border-box;
+      padding: 2px 0;
+      bottom: 1px; }
+      #projects #project_content #more:hover {
+        background: #0368e5; }
 
 #testimonials {
   width: 29%;
   float: right;
   min-height: 100px;
   background: red; }
+
+.home #content.wrapper {
+  margin-bottom: 30px; }
 
 .page #content.wrapper {
   margin-top: 30px; }

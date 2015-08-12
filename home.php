@@ -24,14 +24,15 @@
 	</div>
 </div>
 
-<div class="wrapper clearfix">
+<div id="content" class="wrapper clearfix">
 	<div id="projects">
 		<ul id="projects_and_highlights" class="clearfix">
-			<li><a href="#latest_projects">Latest Projects</a></li>
+			<li><a href="#latest_projects" class="active">Latest Projects</a></li>
 			<li><a href="#highlight_reel">Highlight Reel</a></li>
 		</ul>
 		<div id="project_content">
 			<?php get_template_part( 'loops/recent' ); ?>
+			<a href="" id="more">More</a>
 		</div>
 	</div>
 	<ul id="testimonials"></ul>
