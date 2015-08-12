@@ -105,7 +105,7 @@ h3 {
 
 .wrapper {
   width: 99%;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto; }
 
 .single #content.wrapper {
@@ -189,6 +189,9 @@ h3 {
   background: radial-gradient(ellipse at center, rgba(2, 81, 179, 0.4) 20%, rgba(2, 81, 179, 0.7) 100%);
   /* W3C */ }
 
+.page #content.wrapper {
+  margin-top: 30px; }
+
 .search-results > #content.wrapper {
   margin-top: 30px; }
 
@@ -228,37 +231,47 @@ h3 {
   .serp_item .post_excerpt {
     float: left; }
 
-.gallery .gallery-item {
+.gallery .gallery-item, #showcase .gallery-item {
   position: relative;
   float: left;
   margin: 5px;
   width: 300px;
-  height: 225px; }
-  .gallery .gallery-item:hover {
+  height: 225px;
+  overflow: hidden; }
+  .gallery .gallery-item:hover, #showcase .gallery-item:hover {
     cursor: pointer; }
-  .gallery .gallery-item .gallery-icon {
+  .gallery .gallery-item .gallery-icon, #showcase .gallery-item .gallery-icon {
     position: relative; }
-    .gallery .gallery-item .gallery-icon > a {
+    .gallery .gallery-item .gallery-icon > a, #showcase .gallery-item .gallery-icon > a {
       position: relative; }
-  .gallery .gallery-item > .back {
+      .gallery .gallery-item .gallery-icon > a img, #showcase .gallery-item .gallery-icon > a img {
+        max-width: 100%; }
+  .gallery .gallery-item > .back, #showcase .gallery-item > .back {
     padding: 10px;
     box-sizing: border-box; }
-    .gallery .gallery-item > .back p {
+    .gallery .gallery-item > .back p, #showcase .gallery-item > .back p {
       color: #fff;
       text-transform: uppercase;
       font-size: 14pt;
       font-weight: bold; }
-    .gallery .gallery-item > .back a {
+    .gallery .gallery-item > .back a#action, .gallery .gallery-item > .back a, #showcase .gallery-item > .back a#action, #showcase .gallery-item > .back a {
       position: absolute;
       bottom: 5%;
       right: 5%;
       color: #fff;
       font-size: 14pt; }
+    .gallery .gallery-item > .back a#photo, #showcase .gallery-item > .back a#photo {
+      position: absolute;
+      bottom: 5%;
+      left: 5%;
+      color: #fff;
+      font-size: 14pt;
+      width: 20px; }
 
-.gallery .red.card .back {
+.gallery .red.card .back, #showcase .red.card .back {
   background-color: #E41A1F; }
 
-.gallery .blue.card .back {
+.gallery .blue.card .back, #showcase .blue.card .back {
   background-color: #0251B3; }
 
 #hero .hero-left {

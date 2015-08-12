@@ -37,7 +37,7 @@ h3 { font-size: 16pt; }
 
 .wrapper {
 	width: 99%;
-	max-width: 1200px;
+	max-width: 1300px;
 	margin: 0 auto;
 }
 
@@ -143,10 +143,15 @@ h3 { font-size: 16pt; }
 	}
 }
 
+//Page Styles
+.page #content.wrapper {
+	margin-top: 30px;
+}
+
+//Search Styles
 .search-results > #content.wrapper {
 	margin-top: 30px; 
 }
-
 #searchform {
 	position: absolute;
 	right: 8%;

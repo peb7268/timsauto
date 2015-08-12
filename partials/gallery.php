@@ -15,13 +15,16 @@ function gallery_scripts(){
 	wp_register_style('fancybox', $vendor_dir.'/fancybox/source/jquery.fancybox.css', array(), null, 'screen');
 }
 
-
-function tau_gallery_shortcode( $attr ) {
+function enqueue_gallery_scripts(){
 	wp_enqueue_script('flip');
 	wp_enqueue_script('isotope');
 	wp_enqueue_script('fancybox');
 	wp_enqueue_script('gallery');
 	wp_enqueue_style('fancybox');
+}
+
+function tau_gallery_shortcode( $attr ) {
+	enqueue_gallery_scripts();
 
 	$post = get_post();
 

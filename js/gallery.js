@@ -11,8 +11,12 @@
 		$('.card').flip({
 			trigger : trigger
 		});
-
-		$('.card .back .action').fancybox();
+		
+		$('.action', '.card .back').fancybox({
+			closeClick	: false,
+			openEffect	: 'none',
+			closeEffect	: 'none'
+		});
 
 		//TODO: put a project type filter on
 		$('.gallery').isotope();
