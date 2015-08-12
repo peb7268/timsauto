@@ -44,5 +44,5 @@ function featured_image_url($post){
 	echo $url;
 }
 
-require 'partials/hero.php';
+require 'partials/hero/methods.php';
 require 'partials/gallery.php';

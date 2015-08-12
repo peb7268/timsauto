@@ -3,17 +3,7 @@
 <div id="hero">
 	<div class="wrapper clearfix">
 		<div class="hero-left">
-			<div class="hero-block">
-				<div class="message">
-					<h2>Need For Speed</h2>
-					<p>World Class upholstery at a next door price</p>
-				</div>
-				<a href="#more" class="more">
-					<i class="fa fa-arrow-circle-right"></i>
-				</a>
-				<div class="filter filter-red"></div>
-				<img src='<?php bloginfo('template_directory'); ?>/dist/img/need_for_speed.jpg'>
-			</div>
+			<?php get_template_part('partials/hero/html'); ?>
 		</div>
 		<ul class="hero-right">
 			<li id="message1"><i class="fa fa-headphones"></i> Hear us on the radio</li>

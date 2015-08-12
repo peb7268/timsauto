@@ -8,7 +8,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-
+	<div id="fb-root"></div>
 	<div id="header" class="clearfix">
 		<div class="wrapper">
 			<a id="logo" href="<?php bloginfo('url'); ?>">

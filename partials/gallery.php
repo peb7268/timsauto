@@ -169,7 +169,7 @@ function tau_gallery_shortcode( $attr ) {
 			<div class='back'>
 				<p>$attachment->post_title</p>
 				<a class='action' href='".$attachment->guid."'>
-					<i class='fa fa-arrow-circle-right'></i>
+					<i class='fa fa-camera'></i>
 				</a>
 			</div>";
 

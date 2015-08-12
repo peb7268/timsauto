@@ -47,6 +47,7 @@
 				position: relative;
 				z-index: 0;
 				max-width: 100%; 
+				// max-height: 100%;
 			}
 		}
 	}
@@ -153,4 +154,31 @@
 	float: right;
 	min-height: 100px;
 	background: red;
+}
+
+
+//Page Styles
+.page #content.wrapper {
+	margin-top: 30px;
+}
+
+//Single Styles
+.single {
+	.post { 
+		.featured_image {
+			h2 { font-size: 24pt; font-family: 'Open Sans', sans-serif; float: left; width: 55%; line-height: 1; margin: -7px auto 5px; }
+			img {     float: left; margin-right: 20px; max-width: 40%; border: 1px solid #555; padding: 10px; background-color: #fff; box-shadow: 0px 0px 2px #333; }
+		}
+	}
+	.post_meta {
+		float: left;
+    	width: 55%;
+	}
+}
+
+#social {
+	li { 
+		float: left;
+		margin: 0 10px 0 0;
+	}
 }

@@ -30,7 +30,7 @@
 	//Post DOM content
 	$('document').ready(function(){
 		//Post Behavior
-		var $post_items = $('.featured_image, .more, .title a');
+		var $post_items = $('.featured_image, .more, .title a', '#projects');
 		$post_items.on('click', function(evt){ 
 			evt.preventDefault(); 
 			var action = lookupLink(evt.target);
