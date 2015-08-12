@@ -17,11 +17,15 @@
 					<span>Upholstery</span>			
 				</h1>
 			</a>
-			<ul id="nav">
-				<li><a href="#about">About</a></li>
-				<li><a href="#whatwedo">What We Do</a></li>
-				<li><a href="#showcase">Showcase</a></li>
-				<li><a href="#contact">Get In Touch</a></li>
-			</ul>
+
+			<?php wp_nav_menu(array(
+				'theme_location' 	=> 'main_nav',
+				'menu'				=> 'main_nav',
+				'container_id' 		=> 'nav',
+				'menu_id' 			=> 'nav',
+				'container'			=> false,
+			)); ?>
 		</div>
+		
+		<?php get_search_form(); ?>
 	</div>

@@ -8,6 +8,26 @@ function lookupLink(target){
 	return link;
 }
 
+function bindEvents(){
+	if($('#searchform').length > 0){
+		$('#searchform a').on('click', toggleSearchForm);
+	}
+}
+
+function toggleSearchForm(evt){
+	evt.preventDefault();
+	var $input 		= $(this).parent().find('input');
+	var inputWidth 	= $input.outerWidth();
+	var newWidth  	= (inputWidth == 0) ? '90%' : 0;
+	var newPadding  = (inputWidth == 0) ? '0 10px 0 10px' : 0;
+	
+	$input.animate({
+		'width' 	: newWidth,
+		'padding'	: newPadding
+	}, 100);
+	
+}
+
 $('document').ready(function(){
 	//Post Behavior
 	var $post_items = $('.featured_image, .more, .title a');
@@ -25,4 +45,6 @@ $('document').ready(function(){
 		$(this).find('.filter').slideDown(120);
 		$('body').removeAttr('style');
 	});
+
+	bindEvents();
 });

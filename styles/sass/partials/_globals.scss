@@ -6,6 +6,22 @@ h1 { font-size: 24pt; }
 h2 { font-size: 20pt; }
 h3 { font-size: 16pt; }
 
+::-webkit-input-placeholder {
+   color: lighten($secondary, 15%);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: lighten($secondary, 15%);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: lighten($secondary, 15%);
+}
+
+:-ms-input-placeholder {  
+   color: lighten($secondary, 15%);
+}
+
 .clearfix:after {
 	visibility: hidden;
 	display: block;
@@ -124,6 +140,58 @@ h3 { font-size: 16pt; }
 		// background: -o-radial-gradient(center, ellipse cover,  $secondary 0%,rgba(228,26,31,1) 100%); /* Opera 12+ */
 		// background: -ms-radial-gradient(center, ellipse cover,  $secondary 0%,rgba(228,26,31,1) 100%); /* IE10+ */
 		background: radial-gradient(ellipse at center,  rgba($secondary, .4) 20%, rgba($secondary, .7) 100%); /* W3C */
+	}
+}
+
+.search-results > #content.wrapper {
+	margin-top: 30px; 
+}
+
+#searchform {
+	position: absolute;
+	right: 8%;
+	top: 57px;
+	margin: 0;
+	width: 26%;
+
+	input {
+		background: darken($secondary, 5%);
+		border: none;
+		font-size: 10pt;
+		box-sizing: border-box;
+		padding: 0;
+		width: 0;
+		position: absolute;
+		right: 40px;
+		color: #eee;
+		height: 27px;
+	}
+	a {
+		color: lighten($secondary, 15%);
+		font-size: 17pt;
+		position: absolute;
+    	right: 0;
+		i {}
+	}
+}
+
+.serp_item {
+	margin: 0 0 20px 0;
+	h2.title { 
+		a {
+			font-size: 22pt;
+		}		
+	}
+
+	.featured_image {
+		width: 30%;
+		float: left;
+    	margin: 0 10px 0 0;
+		img { width: 100%; }
+	}
+
+	.post_excerpt {
+		float: left;
 	}
 }
 

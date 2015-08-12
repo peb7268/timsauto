@@ -70,6 +70,20 @@ h2 {
 h3 {
   font-size: 16pt; }
 
+::-webkit-input-placeholder {
+  color: #0573fc; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #0573fc; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #0573fc; }
+
+:-ms-input-placeholder {
+  color: #0573fc; }
+
 .clearfix:after {
   visibility: hidden;
   display: block;
@@ -174,6 +188,45 @@ h3 {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,e41a1f+100&amp;0+0,1+100 */
   background: radial-gradient(ellipse at center, rgba(2, 81, 179, 0.4) 20%, rgba(2, 81, 179, 0.7) 100%);
   /* W3C */ }
+
+.search-results > #content.wrapper {
+  margin-top: 30px; }
+
+#searchform {
+  position: absolute;
+  right: 8%;
+  top: 57px;
+  margin: 0;
+  width: 26%; }
+  #searchform input {
+    background: #02469a;
+    border: none;
+    font-size: 10pt;
+    box-sizing: border-box;
+    padding: 0;
+    width: 0;
+    position: absolute;
+    right: 40px;
+    color: #eee;
+    height: 27px; }
+  #searchform a {
+    color: #0573fc;
+    font-size: 17pt;
+    position: absolute;
+    right: 0; }
+
+.serp_item {
+  margin: 0 0 20px 0; }
+  .serp_item h2.title a {
+    font-size: 22pt; }
+  .serp_item .featured_image {
+    width: 30%;
+    float: left;
+    margin: 0 10px 0 0; }
+    .serp_item .featured_image img {
+      width: 100%; }
+  .serp_item .post_excerpt {
+    float: left; }
 
 .gallery .gallery-item {
   position: relative;
