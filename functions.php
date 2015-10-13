@@ -34,7 +34,7 @@ function remove_img_attr ($html) {
 }
 
 add_action( 'wp_enqueue_scripts', 'init');
-add_action( 'admin_init', 'admin_init');
+add_action( 'wp_loaded', 'admin_init');
 add_filter( 'post_thumbnail_html', 'remove_img_attr' );
 
 function featured_image_url($post){

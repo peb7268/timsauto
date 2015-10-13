@@ -1,5 +1,4 @@
 <?php 
-
 if (have_posts()) : while (have_posts()) : the_post(); ?>
 	<article class="serp_item clearfix" data-action="<?php the_permalink(); ?>">
 		<div class="featured_image">

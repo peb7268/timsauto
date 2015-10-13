@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php 
+/* Template Name: Home */
+get_header(); 
+?>
 	
 <div id="hero">
 	<div class="wrapper clearfix">

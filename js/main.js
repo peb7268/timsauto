@@ -29,6 +29,10 @@
 
 	//Post DOM content
 	$('document').ready(function(){
+		if($('.blog').length > 0){
+			$('.post_excerpt h2.title > a').removeAttr('target');
+		}
+
 		//Post Behavior
 		var $post_items = $('.featured_image, .more, .title a', '#projects');
 		$post_items.on('click', function(evt){ 
