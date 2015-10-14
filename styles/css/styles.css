@@ -557,3 +557,37 @@ h3 {
 #industries-wrapper h2 {
   margin: 0 0 7px;
   color: #0251B3; }
+
+#duluth address {
+  background: #E41A1F; }
+  #duluth address h2 {
+    color: #961114; }
+
+#gainesville address {
+  background: #0251B3; }
+
+#gainesville h2 {
+  color: #012f67; }
+
+.location {
+  float: left;
+  width: 49%;
+  margin: 0 1% 0 0; }
+  .location address {
+    padding: 4px 10px;
+    box-sizing: border-box;
+    margin: 0 0 10px;
+    color: #fff;
+    line-height: 1.2; }
+    .location address a {
+      display: block;
+      margin: 5px 0; }
+    .location address p, .location address a {
+      color: #fff; }
+    .location address h4 {
+      margin: 1px 0 5px; }
+  .location #map {
+    border: 1px solid #333;
+    width: 100%; }
+    .location #map iframe {
+      width: 99%; }

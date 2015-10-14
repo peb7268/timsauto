@@ -305,3 +305,37 @@
 	h2 { margin: 0 0 7px; color: $secondary; }
 }
 
+//Contact Page
+#duluth {
+	address { 
+		background: $primary; 
+		h2 { color: darken($primary, 17%);  }
+	}
+}
+#gainesville {
+	address { background: $secondary; }
+	h2 { color: darken($secondary, 15%);  }
+}
+.location {
+	float: left;
+	width: 49%;
+	margin: 0 1% 0 0;
+	address {
+		padding: 4px 10px;
+		box-sizing: border-box;
+		margin: 0 0 10px;
+		color: #fff;
+		line-height: 1.2;
+		a { display: block; margin: 5px 0; }
+		p, a { color: #fff; }
+		h4 { margin: 1px 0 5px; }
+	}
+	#map {
+		border: 1px solid #333;
+		width: 100%;
+		iframe {
+			width: 99%;
+		}
+	}
+}
+
