@@ -306,31 +306,59 @@
 }
 
 //Contact Page
-#duluth {
-	address { 
+.location, .contact-block {
+	position: relative;
+	float: left;
+	width: 49%;
+	margin: 0 1% 1% 0;
+	.block {
+		box-sizing: border-box;
+		padding: 7px; 
+		min-height: 150px;
+	}
+}
+
+#duluth, .contact-block {
+	address, .block { 
 		background: $primary; 
 		h2 { color: darken($primary, 17%);  }
 	}
+	.fa-map-marker { 
+		color: darken($primary, 15%);  
+		&:hover { color: lighten($primary, 15%);  }
+	}
 }
+
 #gainesville {
 	address { background: $secondary; }
 	h2 { color: darken($secondary, 15%);  }
+	.fa-map-marker { 
+		color: darken($secondary, 15%);  
+		&:hover { color: lighten($secondary, 15%);  }
+	}
 }
+
 .location {
-	float: left;
-	width: 49%;
-	margin: 0 1% 0 0;
 	address {
 		padding: 4px 10px;
 		box-sizing: border-box;
-		margin: 0 0 10px;
+		margin: 0;
 		color: #fff;
 		line-height: 1.2;
 		a { display: block; margin: 5px 0; }
 		p, a { color: #fff; }
 		h4 { margin: 1px 0 5px; }
 	}
+	.fa-map-marker {
+		position: absolute;
+		right: 45px;
+		top: 30px;
+		font-size: 70pt;
+		transition: color 325ms;
+		&:hover { cursor: pointer; }
+	}
 	#map {
+		display: none;
 		border: 1px solid #333;
 		width: 100%;
 		iframe {
@@ -339,3 +367,80 @@
 	}
 }
 
+#email {
+	.block {
+		background: $secondary;
+		h2 { color: darken($secondary, 15%);  margin-bottom: 5px; }
+	}
+	p { color: #fff; }
+	.mc-field-group {
+		width: 70%;
+		float: left;
+		overflow: hidden;
+		margin-right: 1%;
+		input { 
+			border: none;
+			width: 100%; 
+			padding: 10px; 
+			box-sizing: border-box; }
+	}
+	input[type="submit"] { 
+		float: left; 
+		width: 20%; 
+		color: #fff;
+		background: darken($secondary, 15%);
+		border: none;
+		padding: 11px 9px 10px;
+	    box-sizing: border-box;
+	    &:hover { cursor: pointer; color: $secondary; }
+	}
+}
+
+#contact {
+	.successMsg { 
+		color: #fff; 
+		font-size: 28pt; 
+		font-family: 'Oleo Script', cursive; 
+		text-align: center; 
+		width: 80%;
+    	margin: 0 auto;
+	}
+	.block {
+		background: $primary;
+		h2 { color: darken($primary, 15%);  margin-bottom: 10px; }
+	}
+	p { color: #fff; font-style: italic; text-align: center; }
+	
+	.fa-envelope-o {
+		color: darken($primary, 15%);
+		font-size: 52pt;
+		text-align: center;
+		display: block; 
+
+		&:hover { cursor: pointer; }
+	}
+
+	#contactForm { display: none; }
+	ul {
+		position: relative;
+		height: 50px;
+		width: 99%;
+	    margin: 0 auto;
+	    overflow: hidden;
+	    li {
+	    	position: absolute;
+	    	width: 100%;
+			right: -110%;
+			&.current { right: initial; left: 0; }
+	    	input, select, textarea { 
+	    		width: 96%; 
+	    		padding: 10px; 
+	    		border: none; 
+	    		font-size: 14pt; 
+	    		color: #555; 
+	    		margin: 0 0 5px 0; 
+	    	}
+	    	input { border: 1px solid darken($primary, 15%); }
+	    }
+	}
+}

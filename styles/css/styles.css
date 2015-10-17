@@ -558,10 +558,25 @@ h3 {
   margin: 0 0 7px;
   color: #0251B3; }
 
-#duluth address {
+.location, .contact-block {
+  position: relative;
+  float: left;
+  width: 49%;
+  margin: 0 1% 1% 0; }
+  .location .block, .contact-block .block {
+    box-sizing: border-box;
+    padding: 7px;
+    min-height: 150px; }
+
+#duluth address, #duluth .block, .contact-block address, .contact-block .block {
   background: #E41A1F; }
-  #duluth address h2 {
+  #duluth address h2, #duluth .block h2, .contact-block address h2, .contact-block .block h2 {
     color: #961114; }
+
+#duluth .fa-map-marker, .contact-block .fa-map-marker {
+  color: #9f1216; }
+  #duluth .fa-map-marker:hover, .contact-block .fa-map-marker:hover {
+    color: #ed5e61; }
 
 #gainesville address {
   background: #0251B3; }
@@ -569,25 +584,122 @@ h3 {
 #gainesville h2 {
   color: #012f67; }
 
-.location {
+#gainesville .fa-map-marker {
+  color: #012f67; }
+  #gainesville .fa-map-marker:hover {
+    color: #0573fc; }
+
+.location address {
+  padding: 4px 10px;
+  box-sizing: border-box;
+  margin: 0;
+  color: #fff;
+  line-height: 1.2; }
+  .location address a {
+    display: block;
+    margin: 5px 0; }
+  .location address p, .location address a {
+    color: #fff; }
+  .location address h4 {
+    margin: 1px 0 5px; }
+
+.location .fa-map-marker {
+  position: absolute;
+  right: 45px;
+  top: 30px;
+  font-size: 70pt;
+  transition: color 325ms; }
+  .location .fa-map-marker:hover {
+    cursor: pointer; }
+
+.location #map {
+  display: none;
+  border: 1px solid #333;
+  width: 100%; }
+  .location #map iframe {
+    width: 99%; }
+
+#email .block {
+  background: #0251B3; }
+  #email .block h2 {
+    color: #012f67;
+    margin-bottom: 5px; }
+
+#email p {
+  color: #fff; }
+
+#email .mc-field-group {
+  width: 70%;
   float: left;
-  width: 49%;
-  margin: 0 1% 0 0; }
-  .location address {
-    padding: 4px 10px;
-    box-sizing: border-box;
-    margin: 0 0 10px;
-    color: #fff;
-    line-height: 1.2; }
-    .location address a {
-      display: block;
-      margin: 5px 0; }
-    .location address p, .location address a {
-      color: #fff; }
-    .location address h4 {
-      margin: 1px 0 5px; }
-  .location #map {
-    border: 1px solid #333;
-    width: 100%; }
-    .location #map iframe {
-      width: 99%; }
+  overflow: hidden;
+  margin-right: 1%; }
+  #email .mc-field-group input {
+    border: none;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box; }
+
+#email input[type="submit"] {
+  float: left;
+  width: 20%;
+  color: #fff;
+  background: #012f67;
+  border: none;
+  padding: 11px 9px 10px;
+  box-sizing: border-box; }
+  #email input[type="submit"]:hover {
+    cursor: pointer;
+    color: #0251B3; }
+
+#contact .successMsg {
+  color: #fff;
+  font-size: 28pt;
+  font-family: 'Oleo Script', cursive;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto; }
+
+#contact .block {
+  background: #E41A1F; }
+  #contact .block h2 {
+    color: #9f1216;
+    margin-bottom: 10px; }
+
+#contact p {
+  color: #fff;
+  font-style: italic;
+  text-align: center; }
+
+#contact .fa-envelope-o {
+  color: #9f1216;
+  font-size: 52pt;
+  text-align: center;
+  display: block; }
+  #contact .fa-envelope-o:hover {
+    cursor: pointer; }
+
+#contact #contactForm {
+  display: none; }
+
+#contact ul {
+  position: relative;
+  height: 50px;
+  width: 99%;
+  margin: 0 auto;
+  overflow: hidden; }
+  #contact ul li {
+    position: absolute;
+    width: 100%;
+    right: -110%; }
+    #contact ul li.current {
+      right: initial;
+      left: 0; }
+    #contact ul li input, #contact ul li select, #contact ul li textarea {
+      width: 96%;
+      padding: 10px;
+      border: none;
+      font-size: 14pt;
+      color: #555;
+      margin: 0 0 5px 0; }
+    #contact ul li input {
+      border: 1px solid #9f1216; }
