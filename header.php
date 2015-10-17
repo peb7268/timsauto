@@ -14,7 +14,6 @@
 			<a id="logo" href="<?php bloginfo('url'); ?>">
 				<h1 class="title">
 					Tim's Auto
-					<span>Upholstery</span>			
 				</h1>
 			</a>
 
@@ -26,6 +25,11 @@
 				'container'			=> false,
 			)); ?>
 		</div>
-		
-		<?php get_search_form(); ?>
+	
+		<div id="border">
+			<div class="wrapper">
+				<p>Upholstery</p>
+				<?php get_search_form(); ?>
+			</div>
+		</div>
 	</div>

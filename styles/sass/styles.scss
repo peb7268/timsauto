@@ -172,12 +172,12 @@
 }
 
 .home #content.wrapper {
-	margin-bottom: 30px;
+	margin-bottom: 50px;
 }
 
 //Page Styles
 .page #content.wrapper {
-	margin-top: 30px;
+	margin: 30px auto 50px; 
 }
 
 //Single Styles
@@ -306,6 +306,9 @@
 }
 
 //Contact Page
+.page.page-id-57 {
+	#content.wrapper { overflow: hidden; }
+}
 .location, .contact-block {
 	position: relative;
 	float: left;
@@ -354,7 +357,7 @@
 		right: 45px;
 		top: 30px;
 		font-size: 70pt;
-		transition: color 325ms;
+		transition: color 500ms;
 		&:hover { cursor: pointer; }
 	}
 	#map {
@@ -416,8 +419,8 @@
 		font-size: 52pt;
 		text-align: center;
 		display: block; 
-
-		&:hover { cursor: pointer; }
+		transition: color 500ms;
+		&:hover { cursor: pointer; color: lighten($primary, 15%); }
 	}
 
 	#contactForm { display: none; }
@@ -443,4 +446,4 @@
 	    	input { border: 1px solid darken($primary, 15%); }
 	    }
 	}
-}
+} 

@@ -125,11 +125,11 @@ h3 {
   box-sizing: border-box;
   margin: 10px auto 5px;
   position: relative;
-  border-bottom: 35px solid #0251B3;
   width: 100%; }
-  #header .wrapper {
+  #header > .wrapper {
     overflow: hidden;
-    margin: 0 auto -35px auto; }
+    margin: 0 auto -35px auto;
+    min-height: 93px; }
   #header #logo {
     color: #E41A1F;
     letter-spacing: -2px;
@@ -139,14 +139,6 @@ h3 {
     float: left; }
     #header #logo h1 {
       font-size: 45pt; }
-    #header #logo span {
-      color: #fff;
-      display: block;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 100;
-      letter-spacing: 0;
-      padding: 6px 5px 10px;
-      font-size: 16pt; }
   #header #nav {
     float: right;
     margin: 20px 0 0 0; }
@@ -162,6 +154,43 @@ h3 {
         padding: 5px 10px 7px;
         border-radius: 4px;
         text-align: center; }
+  #header #border {
+    background-color: #0251B3;
+    position: relative;
+    overflow: hidden; }
+    #header #border .wrapper {
+      position: relative; }
+    #header #border p {
+      color: #fff;
+      display: block;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 100;
+      letter-spacing: 0;
+      padding: 0px 0 7px 8px;
+      margin: 0;
+      font-size: 16pt; }
+    #header #border #searchform {
+      position: absolute;
+      right: 0;
+      top: 5px;
+      margin: 0;
+      width: 55%; }
+      #header #border #searchform input {
+        background: #02469a;
+        border: none;
+        font-size: 10pt;
+        box-sizing: border-box;
+        padding: 0;
+        width: 0;
+        position: absolute;
+        right: 40px;
+        color: #eee;
+        height: 27px; }
+      #header #border #searchform a {
+        color: #0573fc;
+        font-size: 17pt;
+        position: absolute;
+        right: 0; }
 
 .filter {
   display: block;
@@ -198,29 +227,6 @@ h3 {
 .search-results > #content.wrapper {
   margin-top: 30px; }
 
-#searchform {
-  position: absolute;
-  right: 8%;
-  top: 57px;
-  margin: 0;
-  width: 26%; }
-  #searchform input {
-    background: #02469a;
-    border: none;
-    font-size: 10pt;
-    box-sizing: border-box;
-    padding: 0;
-    width: 0;
-    position: absolute;
-    right: 40px;
-    color: #eee;
-    height: 27px; }
-  #searchform a {
-    color: #0573fc;
-    font-size: 17pt;
-    position: absolute;
-    right: 0; }
-
 .serp_item {
   margin: 0 0 20px 0; }
   .serp_item h2.title a {
@@ -233,6 +239,25 @@ h3 {
       width: 100%; }
   .serp_item .post_excerpt {
     float: left; }
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 35px;
+  background-color: #0251B3; }
+  #footer #footerMenu {
+    width: 230px;
+    margin: 12px auto 0; }
+    #footer #footerMenu li {
+      float: left;
+      margin: 0;
+      padding: 0 2%;
+      border-right: 1px solid #0573fc; }
+      #footer #footerMenu li a {
+        color: #0573fc; }
+      #footer #footerMenu li:last-child {
+        border-right: none; }
 
 .gallery .gallery-item, #showcase .gallery-item {
   position: relative;
@@ -428,10 +453,10 @@ h3 {
   background: red; }
 
 .home #content.wrapper {
-  margin-bottom: 30px; }
+  margin-bottom: 50px; }
 
 .page #content.wrapper {
-  margin-top: 30px; }
+  margin: 30px auto 50px; }
 
 .single .post .featured_image h2 {
   font-size: 24pt;
@@ -558,6 +583,9 @@ h3 {
   margin: 0 0 7px;
   color: #0251B3; }
 
+.page.page-id-57 #content.wrapper {
+  overflow: hidden; }
+
 .location, .contact-block {
   position: relative;
   float: left;
@@ -608,7 +636,7 @@ h3 {
   right: 45px;
   top: 30px;
   font-size: 70pt;
-  transition: color 325ms; }
+  transition: color 500ms; }
   .location .fa-map-marker:hover {
     cursor: pointer; }
 
@@ -674,9 +702,11 @@ h3 {
   color: #9f1216;
   font-size: 52pt;
   text-align: center;
-  display: block; }
+  display: block;
+  transition: color 500ms; }
   #contact .fa-envelope-o:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    color: #ed5e61; }
 
 #contact #contactForm {
   display: none; }
