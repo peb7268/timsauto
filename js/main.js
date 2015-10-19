@@ -1,6 +1,6 @@
 (function($){
 	window.tau = {};
-	
+
 	function lookupLink(target){
 		var link = $(target).data('action');
 		
@@ -21,6 +21,31 @@
 			$('#contact.contact-block select').on('change', delegateKeyEvent);
 			$('.fa-envelope-o').on('click', toggleContactForm);
 		}
+
+		$('#projects_and_highlights > li > a').on('click', togglePosts);
+	}
+
+	function togglePosts(evt){
+		evt.preventDefault();
+		var $navContainer = $('#projects_and_highlights');
+
+		if($navContainer.hasClass('recent_content')){
+			$navContainer.removeClass('recent_content').addClass('featured_content');
+		} else {
+			if($navContainer.hasClass('featured_content')) $navContainer.removeClass('featured_content').addClass('recent_content');
+		}
+
+		$navContainer.find('li a.active').removeClass('active');
+		$(evt.target).addClass('active');
+
+		var $target = $($(evt.target).attr('href'));
+		
+		$('.loop.active').fadeOut(100, function(){
+		   $(this).removeClass('active');
+		   $target.fadeIn(100, function(){
+		   		$(this).addClass('active');
+		   });
+		});
 	}
 
 	function toggleContactForm(evt){

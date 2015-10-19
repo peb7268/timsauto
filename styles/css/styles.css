@@ -392,6 +392,10 @@ h3 {
   float: left; }
   #projects #projects_and_highlights {
     margin-bottom: 5px; }
+    #projects #projects_and_highlights.recent_content {
+      border-bottom: 5px solid #E41A1F; }
+    #projects #projects_and_highlights.featured_content {
+      border-bottom: 5px solid #0251B3; }
     #projects #projects_and_highlights li {
       float: left;
       width: 50%; }
@@ -406,33 +410,36 @@ h3 {
         letter-spacing: -1px; }
       #projects #projects_and_highlights li:last-child a {
         background: #0251B3; }
-  #projects #project_content {
-    position: relative; }
-    #projects #project_content .post {
+  #projects #recent_content, #projects #featured_content {
+    position: relative;
+    display: none; }
+    #projects #recent_content.active, #projects #featured_content.active {
+      display: block; }
+    #projects #recent_content .post, #projects #featured_content .post {
       margin-bottom: 5px; }
-      #projects #project_content .post .featured_image {
+      #projects #recent_content .post .featured_image, #projects #featured_content .post .featured_image {
         position: relative;
         width: 40%;
         float: left;
         margin-right: 1%; }
-        #projects #project_content .post .featured_image img {
+        #projects #recent_content .post .featured_image img, #projects #featured_content .post .featured_image img {
           width: 100%; }
-        #projects #project_content .post .featured_image .filter {
+        #projects #recent_content .post .featured_image .filter, #projects #featured_content .post .featured_image .filter {
           opacity: .7; }
-      #projects #project_content .post .post_excerpt {
+      #projects #recent_content .post .post_excerpt, #projects #featured_content .post .post_excerpt {
         width: 59%;
         float: left; }
-        #projects #project_content .post .post_excerpt .title {
+        #projects #recent_content .post .post_excerpt .title, #projects #featured_content .post .post_excerpt .title {
           line-height: 1;
           margin: 0 0 5px;
           padding: 0; }
-          #projects #project_content .post .post_excerpt .title a {
+          #projects #recent_content .post .post_excerpt .title a, #projects #featured_content .post .post_excerpt .title a {
             display: block;
             font-size: 17pt;
             text-transform: uppercase;
             letter-spacing: -1px;
             padding: 5px 15px; }
-    #projects #project_content #more {
+    #projects #recent_content #more, #projects #featured_content #more {
       background: #0251B3;
       display: block;
       color: #fff;
@@ -443,7 +450,7 @@ h3 {
       box-sizing: border-box;
       padding: 2px 0;
       bottom: 1px; }
-      #projects #project_content #more:hover {
+      #projects #recent_content #more:hover, #projects #featured_content #more:hover {
         background: #0368e5; }
 
 #testimonials {

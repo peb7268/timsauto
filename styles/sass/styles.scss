@@ -101,6 +101,9 @@
 
 	#projects_and_highlights {
 		margin-bottom: 5px; 
+		&.recent_content { border-bottom: 5px solid $primary; }
+		&.featured_content { border-bottom: 5px solid $secondary; }
+
 		li {
 			float: left;
 			width: 50%; 
@@ -118,8 +121,11 @@
 		}
 	}
 
-	#project_content {
-		position: relative; 
+	#recent_content, #featured_content {
+		position: relative;
+		display: none;
+
+		&.active { display: block; }
 
 		.post {
 			margin-bottom: 5px; 

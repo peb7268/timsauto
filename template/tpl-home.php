@@ -29,12 +29,15 @@ get_header();
 
 <div id="content" class="wrapper clearfix">
 	<div id="projects">
-		<ul id="projects_and_highlights" class="clearfix">
-			<li><a href="#latest_projects" class="active">Latest Projects</a></li>
-			<li><a href="#highlight_reel">Highlight Reel</a></li>
+		<ul id="projects_and_highlights" class="clearfix recent_content">
+			<li><a href="#recent_content" id="recent" class="active">Latest Projects</a></li>
+			<li><a href="#featured_content" id="featured">Highlight Reel</a></li>
 		</ul>
-		<div id="project_content">
+		<div id="recent_content" class="loop active">
 			<?php get_template_part( 'loops/recent' ); ?>
+		</div>
+		<div id="featured_content" class="loop">
+			<?php get_template_part( 'loops/featured' ); ?>
 		</div>
 	</div>
 	<ul id="testimonials"></ul>
