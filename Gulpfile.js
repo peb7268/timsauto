@@ -2,7 +2,7 @@ var gulp 		    = require('gulp');
 var imagemin 	  = require('gulp-imagemin');
 var optipng 	  = require('imagemin-optipng');
 var jpegtran 	  = require('imagemin-jpegtran');
-var livereload  = require('gulp-livereload');
+var browserSync = require("browser-sync").create();
 var browserify  = require('browserify');
 var streamify 	= require('gulp-streamify');
 var rename 		  = require('gulp-rename');
@@ -44,19 +44,23 @@ gulp.task('sass', function () {
   gulp.src(paths.sass)
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(gulp.dest(paths.css))
- 	.pipe(livereload())
- 	.pipe(notify("Sass Compiled."));
+ 	  .pipe(notify("Sass Compiled."));
 });
 
 gulp.task('scripts:watch', function () {
   gulp.watch(paths.scripts, ['browserify']);
 });
  
-gulp.task('sass:watch', function () {
-  livereload.listen();
-  gulp.watch(paths.sass, ['sass']);
+
+gulp.task('serve', ['sass'], function(){
+  browserSync.init({
+        //server: "./"
+        proxy: 'http://timsautoupholstery.com'
+    });
+
+    gulp.watch(paths.sass, ['sass']);
+    gulp.watch(['./*.php', paths.sass, paths.scripts]).on('change', browserSync.reload);
 });
 
-
 gulp.task('build',   ['sass', 'browserify', 'images']);
-gulp.task('default', ['sass', 'sass:watch', 'browserify', 'scripts:watch']);
+gulp.task('default', ['serve', 'browserify', 'scripts:watch']);

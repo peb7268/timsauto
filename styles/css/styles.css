@@ -110,7 +110,7 @@ h3 {
   font-family: 'Oleo Script', cursive; }
 
 .wrapper {
-  width: 99%;
+  width: 98%;
   max-width: 1300px;
   margin: 0 auto; }
 
@@ -128,14 +128,14 @@ h3 {
   width: 100%; }
   #header > .wrapper {
     overflow: hidden;
-    margin: 0 auto -35px auto;
-    min-height: 93px; }
+    margin: 0 auto;
+    min-height: 70px; }
   #header #logo {
     color: #E41A1F;
     letter-spacing: -2px;
     line-height: 0.9;
     text-indent: 1%;
-    width: 22%;
+    width: 255px;
     float: left; }
     #header #logo h1 {
       font-size: 45pt; }
@@ -590,6 +590,7 @@ h3 {
   position: relative;
   float: left;
   width: 49%;
+  min-width: 410px;
   margin: 0 1% 1% 0; }
   .location .block, .contact-block .block {
     box-sizing: border-box;
@@ -733,3 +734,47 @@ h3 {
       margin: 0 0 5px 0; }
     #contact ul li input {
       border: 1px solid #9f1216; }
+
+@media (max-width: 850px) {
+  #header #nav {
+    margin: 5px auto 10px;
+    width: 100%; }
+  .location, .contact-block {
+    float: none;
+    margin: 5px auto; } }
+
+@media (max-width: 750px) {
+  #header > .wrapper {
+    text-align: center; }
+  #header #logo {
+    float: none;
+    margin: 0 auto;
+    display: block; }
+  #header #nav {
+    margin: 5px auto 10px;
+    width: auto;
+    float: none;
+    display: inline-block; }
+  .location, .contact-block {
+    float: none;
+    margin: 5px auto; } }
+
+@media (max-width: 550px) {
+  #header #nav {
+    margin: 5px auto 10px;
+    width: 100%; }
+    #header #nav li {
+      float: none;
+      margin: 0 auto; }
+      #header #nav li a {
+        display: block;
+        border-radius: 0;
+        padding: 10px;
+        border-bottom: 1px solid #b61519;
+        border-top: 1px solid #ea474b;
+        transition: background-color 500ms; }
+        #header #nav li a:hover {
+          background: #ea474b; }
+  .location, .contact-block {
+    float: none;
+    margin: 5px auto; } }

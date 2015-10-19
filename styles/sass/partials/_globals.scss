@@ -38,7 +38,7 @@ h3 { font-size: 16pt; }
 .title { font-family: 'Oleo Script', cursive; }
 
 .wrapper {
-	width: 99%;
+	width: 98%;
 	max-width: 1300px;
 	margin: 0 auto;
 }
@@ -58,14 +58,14 @@ h3 { font-size: 16pt; }
     position: relative;
     width: 100%;
 
-    & > .wrapper { overflow: hidden; margin: 0 auto -35px auto; min-height: 93px; }
+    & > .wrapper { overflow: hidden; margin: 0 auto; min-height: 70px; }
 
 	#logo { 
 		color: $primary; 
     	letter-spacing: -2px;
 	    line-height: 0.9;
 	    text-indent: 1%; 
-        width: 22%;
+        width: 255px;
 	    float: left;
 	    h1 { font-size: 45pt; }
 	}

@@ -1,0 +1,26 @@
+@media (max-width: 550px) {
+	#header {
+	    #nav {
+		    margin: 5px auto 10px;
+		    width: 100%;
+		    
+		    li {
+		    	float: none;
+		    	margin: 0 auto;
+		    	a { 
+		    		display: block; 
+		    		border-radius: 0;
+		    		padding: 10px;
+		    		border-bottom: 1px solid darken($primary, 10%);
+		    		border-top: 1px solid lighten($primary, 10%);
+		    		transition: background-color 500ms;
+		    		&:hover { background: lighten($primary, 10%); }
+		    	}
+		    }
+	    }
+	}
+  .location, .contact-block {
+  	float: none;
+  	margin: 5px auto;
+  }
+}

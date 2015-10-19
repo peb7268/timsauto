@@ -313,6 +313,7 @@
 	position: relative;
 	float: left;
 	width: 49%;
+	min-width: 410px;
 	margin: 0 1% 1% 0;
 	.block {
 		box-sizing: border-box;
@@ -447,3 +448,6 @@
 	    }
 	}
 } 
+
+@import 'mediaqueries/tablets';
+@import 'mediaqueries/phones';
