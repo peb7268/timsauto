@@ -1,4 +1,6 @@
 (function($){
+	window.tau = {};
+	
 	function lookupLink(target){
 		var link = $(target).data('action');
 		

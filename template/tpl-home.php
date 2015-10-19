@@ -35,7 +35,6 @@ get_header();
 		</ul>
 		<div id="project_content">
 			<?php get_template_part( 'loops/recent' ); ?>
-			<a href="" id="more">More</a>
 		</div>
 	</div>
 	<ul id="testimonials"></ul>
