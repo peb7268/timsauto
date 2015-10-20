@@ -2,11 +2,9 @@
 	var count = 2;
 	$(window).scroll(function(){
 		if ($(window).scrollTop() == $(document).height() - $(window).height()){			
-			window.setTimeout(function(){
-				if(window.tau.isLoading === true) return;
-				loadArticles(count);
-				count++;
-			}, 750);
+			if(window.tau.isLoading === true) return;
+			loadArticles(count);
+			count++;
 		}
 	}); 
 

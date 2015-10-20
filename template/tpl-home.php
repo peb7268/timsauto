@@ -12,15 +12,14 @@ get_header();
 			<li id="message1"><i class="fa fa-headphones"></i> Hear us on the radio</li>
 			<li id="message2">Check out what's going on at each of our locations</li>
 			<li id="message3">
-				<a href="#">
-					<img src='<?php bloginfo('template_directory'); ?>/img/duluth.png'>
-					<p>Duluth</p>
-				</a>
+				<img src='<?php bloginfo('template_directory'); ?>/img/duluth.png'>
+				<p id="locations">
+					<a href="#">Duluth</a> | <a href="#">Gainesville</a>
+				</p>
 			</li>
 			<li id="message4">
-				<a href="#">
-					<img src='<?php bloginfo('template_directory'); ?>/img/gainesville.png'>
-					<p>Gainesville</p>
+				<a href="#emailForm">
+					<h4>Sign up for our <br> newsletter</h4>
 				</a>
 			</li>
 		</ul>
@@ -40,7 +39,6 @@ get_header();
 			<?php get_template_part( 'loops/featured' ); ?>
 		</div>
 	</div>
-	<ul id="testimonials"></ul>
 </div>
 
 <?php get_footer(); ?>

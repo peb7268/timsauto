@@ -79,13 +79,26 @@
 		    text-align: center;
 		}
 		#message3, #message4 {
-			height: 135px;
 			margin-bottom: 5px;
-			overflow: hidden;
 			position: relative;
-			p { position: absolute; }
-			a { float: left; }
+			p#locations {
+				text-align: center;
+				border-bottom: 5px solid $secondary;
+				padding-bottom: 5px;
+			}
 			img { max-width: 100%; }
+		}
+		
+		#message4 a {
+			font-family: 'Oleo Script', cursive;
+			font-size: 23px;
+			background-color: $primary;
+			display: block;
+			color: #fff;
+			color: #fff;
+		    padding: 5px 10px;
+		    box-sizing: border-box;
+		    text-align: center;;
 		}
 
 		li:last-child {
@@ -129,6 +142,8 @@
 
 		.post {
 			margin-bottom: 5px; 
+			overflow: hidden;
+
 			.featured_image {
 				position: relative;
 				width: 40%; 
@@ -152,6 +167,7 @@
 					    padding: 5px 15px;
 					}
 				}
+				p { box-sizing: border-box; padding: 0 10px 0 0; }
 			}
 		}
 		#more {

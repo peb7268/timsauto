@@ -1,5 +1,6 @@
 (function($){
 	window.tau = {};
+	tau.animationSpeed = 225;
 
 	function lookupLink(target){
 		var link = $(target).data('action');
@@ -10,9 +11,8 @@
 	}
 
 	function bindEvents(){
-		if($('#searchform').length > 0){
-			$('#searchform a').on('click', toggleSearchForm);
-		}
+		$('#searchform a').on('click', toggleSearchForm);
+		$('.toggleMobileNav').on('click', toggleMobileNav);
 
 		//Contact Form
 		if($('#contact.contact-block').length > 0){
@@ -23,6 +23,51 @@
 		}
 
 		$('#projects_and_highlights > li > a').on('click', togglePosts);
+
+		$('#message4 > a').on('click', toggleEmailForm);
+		$('.home #mc-embedded-subscribe-form').on('submit', hideEmailForm);
+		$('body').on('click', '.shade', hideEmailForm);
+	}
+
+	function toggleMobileNav(evt){
+		evt.preventDefault();
+		$('#nav').slideToggle(100);
+	}
+
+	function hideEmailForm(evt){
+		$('#emailForm').animate({
+			top: '-100%'
+		}, (tau.animationSpeed + 175), function(){
+			$('.shade').animate({
+				bottom: '-100%'
+			}, (tau.animationSpeed + 100));
+		});
+	}
+
+	function showEmailForm(){
+		var $shade = $('<div />', {
+			class: 'shade'
+		});
+
+		$('body').append($shade);
+
+		$shade.animate({
+			bottom: 0
+		}, tau.animationSpeed, function(){
+			$('#emailForm').css('display', 'block').animate({
+				top: '30%'
+			}, tau.animationSpeed);
+		});
+	}
+
+	function toggleEmailForm(evt){
+		evt.preventDefault();
+		
+		if(! $('#emailForm').is(':visible')){
+			showEmailForm(evt);
+		} else {
+			hideEmailForm(evt);
+		}
 	}
 
 	function togglePosts(evt){

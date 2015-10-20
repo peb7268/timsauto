@@ -1,6 +1,8 @@
 #Todos
 
-Home page ajax effects
+Make sure the ajaxed home page content doesnt have duplicates
+Encapsulate the inifnite scroll logic and make a readme on it and move it's to its own github repo.
+
 Home page maps & CTA's
 Default image for posts with no featured image
 Update the images on the what we do page

@@ -1,9 +1,11 @@
 @media (max-width: 550px) {
 	#header {
+		#logo { line-height: 1.1; }
 	    #nav {
 		    margin: 5px auto 10px;
 		    width: 100%;
-		    
+		    display: none;
+
 		    li {
 		    	float: none;
 		    	margin: 0 auto;
@@ -18,9 +20,48 @@
 		    	}
 		    }
 	    }
+	    .toggleMobileNav { display: block; }
+	    #border {
+	    	
+	    	min-height: 45px;
+	    }
 	}
-  .location, .contact-block {
-  	float: none;
-  	margin: 5px auto;
-  }
+	.location, .contact-block {
+		float: none;
+		margin: 5px auto;
+	}
+	#hero {
+		.hero-left, .hero-right {
+			float: none;
+			width: 100%;
+		}
+		.hero-left {
+			margin: 0 auto 10px;
+		}
+		.hero-right {
+			#message1 {
+				font-size: 20pt;
+				line-height: 1.4;
+				margin: 0 0 10px;
+				padding-bottom: 5px;
+				text-align: center;
+				i.fa {}
+			}
+		}
+	}
+	
+	#projects {
+		float: none;
+		width: 100%;
+		margin: 0 auto;
+		#projects_and_highlights li a {
+			padding: 10px 5px;
+		}
+	}
+
+	.page {
+		#content.wrapper {
+			margin-top: 0px;
+		}
+	}
 }
