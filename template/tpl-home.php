@@ -14,7 +14,7 @@ get_header();
 			<li id="message3">
 				<img src='<?php bloginfo('template_directory'); ?>/img/duluth.png'>
 				<p id="locations">
-					<a href="#">Duluth</a> | <a href="#">Gainesville</a>
+					<a target="_blank" href="https://www.google.com/maps/place/Tim's+Auto+Upholstery/@33.9867398,-84.1546128,17z/data=!3m1!4b1!4m2!3m1!1s0x88f5a25c829d189d:0xb39d769913751fc">Duluth</a> | <a href="https://www.google.com/maps/place/Tim's+Auto+Upholstery/@34.2730678,-83.8622846,17z/data=!3m1!4b1!4m2!3m1!1s0x88f5f40f227bc52f:0x597e3af3f9bcce66" target="_blank">Gainesville</a>
 				</p>
 			</li>
 			<li id="message4">

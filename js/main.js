@@ -27,7 +27,10 @@
 		$('#message4 > a').on('click', toggleEmailForm);
 		$('.home #mc-embedded-subscribe-form').on('submit', hideEmailForm);
 		$('body').on('click', '.shade', hideEmailForm);
+		$('#galleryWrapper.employeeGallery .gallery-icon.portrait a').on('click', clearBehaviour);
 	}
+
+	function clearBehaviour(evt){ evt.preventDefault(); }
 
 	function toggleMobileNav(evt){
 		evt.preventDefault();
