@@ -1,6 +1,17 @@
 <?php 
-$idx 	= 0; 
-$recent_query = new WP_Query('orderby=rand&posts_per_page=6&cat=21');
+
+$posts_finished  = $_SESSION['posts_finished'];
+$cat_id 	     = (strlen($_POST['cat_id']) > 0) ? $_POST['cat_id'] : '21';
+$paged           = $_POST['page_no'];
+$posts_per_page  = get_option('posts_per_page');
+$offset 	     = $paged * $posts_per_page;
+
+if($offset == 0) session_unset();
+
+$idx 			 = 0; 
+$query_string 	 = 'posts_per_page='.$posts_per_page.'&cat='.$cat_id.'&paged='.$paged;
+
+$recent_query 	 = new WP_Query($query_string);
 if($recent_query->have_posts()) : while ($recent_query->have_posts()) : $recent_query->the_post(); ?>
 
 	<?php $class 	= ($idx % 2 == 0) ? 'red' : 'blue'; ?>
@@ -20,5 +31,8 @@ if($recent_query->have_posts()) : while ($recent_query->have_posts()) : $recent_
 	</article>
 
 <?php $idx++; endwhile; else : ?>
-	<p>Else here</p>
-<?php endif; ?>
+	<?php if($_SESSION['posts_finished'] == TRUE) { die(''); } else { ?>
+
+		<p>No more posts found..</p>
+	<?php } $_SESSION['posts_finished'] = TRUE; 
+endif; ?>

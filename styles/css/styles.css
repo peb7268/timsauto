@@ -246,7 +246,8 @@ h3 {
     .serp_item .featured_image img {
       width: 100%; }
   .serp_item .post_excerpt {
-    float: left; }
+    float: right;
+    width: 69%; }
 
 #footer {
   position: fixed;
@@ -333,11 +334,13 @@ h3 {
 
 #hero .hero-left {
   width: 70%;
+  height: 370px;
   float: left;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   #hero .hero-left .hero-block {
     position: relative;
-    height: 350px;
+    min-height: 350px;
     overflow: hidden; }
     #hero .hero-left .hero-block .message {
       position: absolute;
@@ -829,6 +832,10 @@ h3 {
     display: block; }
   #header #border {
     min-height: 45px; }
+    #header #border p {
+      padding: 5px 0 7px 8px; }
+    #header #border #searchform {
+      top: 10px; }
   .location, .contact-block {
     float: none;
     margin: 5px auto; }
@@ -850,4 +857,66 @@ h3 {
     #projects #projects_and_highlights li a {
       padding: 10px 5px; }
   .page #content.wrapper {
-    margin-top: 0px; } }
+    margin-top: 0px; }
+  #gallery-1.gallery {
+    width: 98%;
+    overflow: hidden;
+    margin: 10px auto 20px; }
+    #gallery-1.gallery dl.gallery-item {
+      width: auto;
+      min-width: initial;
+      margin: 0 auto 10px auto;
+      float: none; }
+      #gallery-1.gallery dl.gallery-item dt.gallery-icon.portrait {
+        float: none;
+        width: 100%; }
+        #gallery-1.gallery dl.gallery-item dt.gallery-icon.portrait a {
+          float: none;
+          width: 100%;
+          text-align: center; }
+      #gallery-1.gallery dl.gallery-item dd {
+        text-align: center; }
+  #aboutContent .left, #aboutContent .right {
+    float: none;
+    width: 100%; }
+  #aboutContent .right {
+    border: none;
+    border-top: 1px solid #0251B3; }
+    #aboutContent .right h4 {
+      font-size: 24pt;
+      margin-bottom: 10px; }
+    #aboutContent .right p {
+      font-size: 14pt;
+      line-height: 1.3; }
+  #services-grid {
+    float: none; }
+    #services-grid ul {
+      float: none;
+      width: 98%;
+      margin: 20px auto 0; }
+      #services-grid ul li {
+        float: none;
+        width: 90%;
+        margin: 0 auto 35px; }
+  #service-wrapper h2, #industries-wrapper h2 {
+    margin-bottom: -10px;
+    font-size: 22pt; }
+  #service-wrapper h4, #industries-wrapper h4 {
+    margin: 30px 0 4px;
+    font-size: 14pt; }
+  #industries-wrapper h2 {
+    margin-bottom: 5px; }
+  #showcase {
+    margin: 0 auto;
+    display: block;
+    width: 76%; }
+    #showcase .gallery-item {
+      margin: 10px auto; }
+  .serp_item {
+    margin: 20px 0 30px 0; }
+    .serp_item .featured_image {
+      width: 100%;
+      float: none; }
+    .serp_item .post_excerpt {
+      float: none;
+      width: initial; } }

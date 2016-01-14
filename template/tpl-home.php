@@ -29,8 +29,8 @@ get_header();
 <div id="content" class="wrapper clearfix">
 	<div id="projects">
 		<ul id="projects_and_highlights" class="clearfix recent_content">
-			<li><a href="#recent_content" id="recent" class="active">Latest Projects</a></li>
-			<li><a href="#featured_content" id="featured">Highlight Reel</a></li>
+			<li><a href="#recent_content" id="recent" data-cat-id='21' class="active">Latest Projects</a></li>
+			<li><a href="#featured_content" id="featured" data-cat-id='8'>Highlight Reel</a></li>
 		</ul>
 		<div id="recent_content" class="loop active">
 			<?php get_template_part( 'loops/recent' ); ?>

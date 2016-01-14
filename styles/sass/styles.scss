@@ -6,11 +6,14 @@
 #hero {
 	.hero-left {
 		width: 70%;
+		height: 370px;
 		float: left;
 		position: relative;
+		overflow: hidden;
+
 		.hero-block{
 			position: relative;
-			height: 350px;
+			min-height: 350px;
 		    overflow: hidden;
 			.message{
 				position: absolute;
