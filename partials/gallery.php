@@ -1,4 +1,9 @@
 <?php
+	
+function dd($mixed){
+	var_dump($mixed);
+	die('');
+}
 
 //TAU Gallery ShortCode
 add_action('wp_enqueue_scripts', 'gallery_scripts');
@@ -26,19 +31,18 @@ function enqueue_gallery_scripts(){
 function tau_gallery_shortcode( $attr ) {
 	enqueue_gallery_scripts();
 
-	$post = get_post();
+	$post 		= get_post();
+	$post_id 	= $post ? $post->ID : 0;	//1079
 
 	static $instance = 0;
 	$instance++;
-
-	if ( ! empty( $attr['ids'] ) ) {
+		
+	if (! empty($attr['ids'])) {
 		// 'ids' is explicitly ordered, unless you specify otherwise.
-		if ( empty( $attr['orderby'] ) ) {
-			$attr['orderby'] = 'post__in';
-		}
+		if(empty($attr['orderby'])) $attr['orderby'] = 'post__in';		
 		$attr['include'] = $attr['ids'];
 	}
-
+	
 	/**
 	 * Filter the default gallery shortcode output.
 	 *
@@ -58,18 +62,18 @@ function tau_gallery_shortcode( $attr ) {
 	}
 
 	// We're trusting author input, so let's at least make sure it looks like a valid orderby statement
-	if ( isset( $attr['orderby'] ) ) {
+	if (isset( $attr['orderby'])) {
 		$attr['orderby'] = sanitize_sql_orderby( $attr['orderby'] );
-		if ( ! $attr['orderby'] ) {
+		if (! $attr['orderby'] ) {
 			unset( $attr['orderby'] );
 		}
 	}
-
+	
 	$html5 = current_theme_supports( 'html5', 'gallery' );
 	$atts = shortcode_atts( array(
 		'order'      => 'ASC',
 		'orderby'    => 'menu_order ID',
-		'id'         => $post ? $post->ID : 0,
+		'id'         => $post_id,
 		'itemtag'    => $html5 ? 'figure'     : 'li',
 		'icontag'    => $html5 ? 'div'        : 'div',
 		'captiontag' => $html5 ? 'figcaption' : 'p',
@@ -85,9 +89,10 @@ function tau_gallery_shortcode( $attr ) {
 		$atts['orderby'] = 'none';
 	}
 
-	if ( ! empty( $atts['include'] ) ) {
-		$_attachments = get_posts( array( 'include' => $atts['include'], 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $atts['order'], 'orderby' => $atts['orderby'] ) );
-
+	if(! empty( $atts['include'])){
+		$_attachments = get_posts(array( 'include' => $atts['include'], 'post_status' => 'inherit', 'post_type' => 'attachment', 
+		'post_mime_type' => 'image/jpeg', 'order' => $atts['order'], 'orderby' => $atts['orderby']));
+		
 		$attachments = array();
 		foreach ( $_attachments as $key => $val ) {
 			$attachments[$val->ID] = $_attachments[$key];
@@ -111,7 +116,7 @@ function tau_gallery_shortcode( $attr ) {
 	}
 
 	$itemtag = tag_escape( $atts['itemtag'] );
-	$captiontag = tag_escape( $atts['captiontag'] );
+	$captiontag = tag_escape( $atts['captiontag'] );	
 	$icontag = tag_escape( $atts['icontag'] );
 	$valid_tags = wp_kses_allowed_html( 'post' );
 	if ( ! isset( $valid_tags[ $itemtag ] ) ) {
@@ -140,19 +145,29 @@ function tau_gallery_shortcode( $attr ) {
 
 	$i = 0;
 	foreach ( $attachments as $id => $attachment ) {
-		if ( ! empty( $atts['link'] ) && 'file' === $atts['link'] ) {
+		if (! empty( $atts['link']) && 'file' === $atts['link']){
 			$image_output = wp_get_attachment_link( $id, $atts['size'], false, false );
 		} elseif ( ! empty( $atts['link'] ) && 'none' === $atts['link'] ) {
 			$image_output = wp_get_attachment_image( $id, $atts['size'], false );
 		} else {
-			$image_output = wp_get_attachment_link( $id, $atts['size'], true, false );
+			//$size = $atts['size'];
+			$size 			= 'large';
+			//$image_output = wp_get_attachment_image($id, $size, true, false);
+			//$image_url 		= wp_get_attachment_url($id);
+			$image_output 	= wp_get_attachment_image_src($id, $size, true, false);
+			$image_output 	= "<img src='".$image_output[0]."'>";
 		}
-		$image_meta  = wp_get_attachment_metadata( $id );
+		$image_meta  = wp_get_attachment_metadata($id);
 		
-		// echo "<pre>";
-		// var_dump($attachment);
-		// echo "</pre>";
-		// die('');
+		/*
+		
+		if($id == 1003){
+			echo "<pre>";
+			var_dump($attachment);
+			echo "</pre>";
+			die('');
+		}
+		*/
 
 		$filter_class = ($i % 2 == 0) ? 'red' : 'blue';
 		$orientation  = '';
@@ -168,17 +183,16 @@ function tau_gallery_shortcode( $attr ) {
 			</{$icontag}>
 			<div class='back'>
 				<p>$attachment->post_title</p>
+				<p class='postExcerpt'>
+					<{$captiontag} class='wp-caption-text gallery-caption'>
+					".wptexturize($attachment->post_excerpt)."
+					</{$captiontag}>
+				</p>
 				<a class='action' href='".$attachment->guid."'>
 					<i class='fa fa-camera'></i>
 				</a>
 			</div>";
 
-		if ( $captiontag && trim($attachment->post_excerpt) ) {
-			$output .= "
-				<{$captiontag} class='wp-caption-text gallery-caption'>
-				" . wptexturize($attachment->post_excerpt) . "
-				</{$captiontag}>";
-		}
 		$output .= "</{$itemtag}>";
 		++$i;
 	}

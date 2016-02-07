@@ -40,9 +40,22 @@
 		.hero-left, .hero-right {
 			float: none;
 			width: 100%;
+			height: initial;
 		}
 		.hero-left {
 			margin: 0 auto 10px;
+			.hero-block {
+				min-height: initial;
+				.message {
+					top: 0;
+
+					h2 {
+						font-size: 30pt;
+						letter-spacing: 0;
+						margin-top: 5px;
+					}
+				}
+			}
 		}
 		.hero-right {
 			#message1 {
@@ -71,30 +84,53 @@
 	}
 
 	//About Page
+	.page-id-2{
+		#gallery-1.gallery {
+			width: 98%;
+	    	overflow: hidden;
+	    	margin: 10px auto 20px;
+
+	    	dl.gallery-item {
+	    		width: auto;
+	    		min-width: initial;
+	    		margin: 0 auto 10px auto;
+	    		float: none;
+	    		dt.gallery-icon.portrait {
+	    			float: none;
+	    			width: 100%;
+	    			a {
+	    				float: none;
+	    				width: 100%;
+	    				text-align: center;
+	    			}
+	    		}
+	    		dd {
+					text-align: center;
+				}
+	    	}
+		}
+	}
+
 	#gallery-1.gallery {
 		width: 98%;
     	overflow: hidden;
     	margin: 10px auto 20px;
 
-    	dl.gallery-item {
-    		width: auto;
-    		min-width: initial;
-    		margin: 0 auto 10px auto;
-    		float: none;
-    		dt.gallery-icon.portrait {
-    			float: none;
-    			width: 100%;
-    			a {
-    				float: none;
-    				width: 100%;
-    				text-align: center;
-    			}
-    		}
-    		dd {
-				text-align: center;
+    	.gallery-item {
+    		width: 400px;
+		    height: 300px;
+		    margin: 0 auto 10px;
+		    padding: 0 0 10px;
+		    float: none;
+		    box-sizing: border-box;
+		    overflow: hidden;
+		    .gallery-icon img {
+		    	max-height: initial;
+			    max-width: 100%;
 			}
     	}
 	}
+
 	#aboutContent {
 		.left, .right {
 			float: none;
@@ -128,19 +164,26 @@
 			}
 		}	
 	}
+
 	#service-wrapper, #industries-wrapper {
 		h2 { margin-bottom: -10px; font-size: 22pt; }
 		h4 { margin: 30px 0 4px; font-size: 14pt; }
 	}
+
 	#industries-wrapper h2 { margin-bottom: 5px; }
 
 	//Showcase Page
 	#showcase {
 		margin: 0 auto;
 	    display: block;
-	    width: 76%;
+	    width: 98%;
+	    overflow: hidden;
+
 		.gallery-item {
-			margin: 10px auto;
+		    float: none;
+		    margin: 0 auto 10px;
+		    width: 400px;
+		    height: 300px;
 		}
 	}
 
@@ -154,6 +197,36 @@
 		.post_excerpt {
 			float: none;
 			width: initial;
+		}
+	}
+
+	.single .post {
+		.featured_image {
+			& > img {
+				float: none;
+				margin: 0 auto 10px;
+				max-width: 90%;
+				border: 1px solid #555;
+				padding: 10px;
+				background-color: #fff;
+				box-shadow: 0px 0px 2px #333;
+				display: block;
+			}
+			h2 {
+				font-size: 22pt;
+			    float: none;
+			    width: 95%;
+			    margin: 0 auto 10px;
+			}
+		}
+		.post_meta {
+			float: none;
+			width: 90%;
+			margin: 0 auto 10px;
+		}
+		.excerpt {
+			width: 90%;
+			margin: 0 auto;
 		}
 	}
 }

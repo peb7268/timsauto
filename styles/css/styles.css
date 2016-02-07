@@ -292,18 +292,15 @@ h3 {
   position: relative;
   float: left;
   margin: 5px;
-  width: 300px;
-  height: 225px;
+  width: 250px;
+  height: 250px;
   overflow: hidden; }
   .gallery .gallery-item:hover, #showcase .gallery-item:hover {
     cursor: pointer; }
   .gallery .gallery-item .gallery-icon, #showcase .gallery-item .gallery-icon {
     position: relative; }
-    .gallery .gallery-item .gallery-icon > a, #showcase .gallery-item .gallery-icon > a {
-      position: relative; }
-      .gallery .gallery-item .gallery-icon > a img, #showcase .gallery-item .gallery-icon > a img {
-        max-width: 100%;
-        height: 100%; }
+    .gallery .gallery-item .gallery-icon img, #showcase .gallery-item .gallery-icon img {
+      height: 100%; }
   .gallery .gallery-item > .back, #showcase .gallery-item > .back {
     padding: 10px;
     box-sizing: border-box; }
@@ -312,6 +309,10 @@ h3 {
       text-transform: uppercase;
       font-size: 14pt;
       font-weight: bold; }
+    .gallery .gallery-item > .back p.postExcerpt, .gallery .gallery-item > .back p.wp-caption-text.gallery-caption, #showcase .gallery-item > .back p.postExcerpt, #showcase .gallery-item > .back p.wp-caption-text.gallery-caption {
+      line-height: 1;
+      font-size: 11pt;
+      font-style: italic; }
     .gallery .gallery-item > .back a#action, .gallery .gallery-item > .back a, #showcase .gallery-item > .back a#action, #showcase .gallery-item > .back a {
       position: absolute;
       bottom: 5%;
@@ -581,9 +582,8 @@ h3 {
   margin: 10px auto 20px; }
   #gallery-1.gallery .gallery-item {
     width: 20%;
-    min-width: 230px;
-    min-height: 345px;
-    height: initial;
+    width: 250px;
+    height: 250px;
     margin: 0 1% 10px 0;
     padding: 0 0 10px;
     float: left;
@@ -841,9 +841,18 @@ h3 {
     margin: 5px auto; }
   #hero .hero-left, #hero .hero-right {
     float: none;
-    width: 100%; }
+    width: 100%;
+    height: initial; }
   #hero .hero-left {
     margin: 0 auto 10px; }
+    #hero .hero-left .hero-block {
+      min-height: initial; }
+      #hero .hero-left .hero-block .message {
+        top: 0; }
+        #hero .hero-left .hero-block .message h2 {
+          font-size: 30pt;
+          letter-spacing: 0;
+          margin-top: 5px; }
   #hero .hero-right #message1 {
     font-size: 20pt;
     line-height: 1.4;
@@ -858,24 +867,39 @@ h3 {
       padding: 10px 5px; }
   .page #content.wrapper {
     margin-top: 0px; }
-  #gallery-1.gallery {
+  .page-id-2 #gallery-1.gallery {
     width: 98%;
     overflow: hidden;
     margin: 10px auto 20px; }
-    #gallery-1.gallery dl.gallery-item {
+    .page-id-2 #gallery-1.gallery dl.gallery-item {
       width: auto;
       min-width: initial;
       margin: 0 auto 10px auto;
       float: none; }
-      #gallery-1.gallery dl.gallery-item dt.gallery-icon.portrait {
+      .page-id-2 #gallery-1.gallery dl.gallery-item dt.gallery-icon.portrait {
         float: none;
         width: 100%; }
-        #gallery-1.gallery dl.gallery-item dt.gallery-icon.portrait a {
+        .page-id-2 #gallery-1.gallery dl.gallery-item dt.gallery-icon.portrait a {
           float: none;
           width: 100%;
           text-align: center; }
-      #gallery-1.gallery dl.gallery-item dd {
+      .page-id-2 #gallery-1.gallery dl.gallery-item dd {
         text-align: center; }
+  #gallery-1.gallery {
+    width: 98%;
+    overflow: hidden;
+    margin: 10px auto 20px; }
+    #gallery-1.gallery .gallery-item {
+      width: 400px;
+      height: 300px;
+      margin: 0 auto 10px;
+      padding: 0 0 10px;
+      float: none;
+      box-sizing: border-box;
+      overflow: hidden; }
+      #gallery-1.gallery .gallery-item .gallery-icon img {
+        max-height: initial;
+        max-width: 100%; }
   #aboutContent .left, #aboutContent .right {
     float: none;
     width: 100%; }
@@ -909,9 +933,13 @@ h3 {
   #showcase {
     margin: 0 auto;
     display: block;
-    width: 76%; }
+    width: 98%;
+    overflow: hidden; }
     #showcase .gallery-item {
-      margin: 10px auto; }
+      float: none;
+      margin: 0 auto 10px;
+      width: 400px;
+      height: 300px; }
   .serp_item {
     margin: 20px 0 30px 0; }
     .serp_item .featured_image {
@@ -919,4 +947,25 @@ h3 {
       float: none; }
     .serp_item .post_excerpt {
       float: none;
-      width: initial; } }
+      width: initial; }
+  .single .post .featured_image > img {
+    float: none;
+    margin: 0 auto 10px;
+    max-width: 90%;
+    border: 1px solid #555;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px #333;
+    display: block; }
+  .single .post .featured_image h2 {
+    font-size: 22pt;
+    float: none;
+    width: 95%;
+    margin: 0 auto 10px; }
+  .single .post .post_meta {
+    float: none;
+    width: 90%;
+    margin: 0 auto 10px; }
+  .single .post .excerpt {
+    width: 90%;
+    margin: 0 auto; } }

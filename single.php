@@ -28,6 +28,7 @@
 						fjs.parentNode.insertBefore(js, fjs);
 						}(document, 'script', 'facebook-jssdk'));</script>
 					</div>
+					<div class="clearfix excerpt"><?php the_excerpt(); ?></div>
 				</div>
 	
 				<div class="seperator"></div>
